@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pegasus Summarizer</title>
+</head>
+<body>
+    <h1>Pegasus Summarizer</h1>
+
+    <form action="/summarize" method="post">
+        <label for="text">Enter Text to Summarize:</label>
+        <textarea name="text" rows="5" cols="50"></textarea>
+        <br>
+        <input type="submit" value="Summarize">
+    </form>
+
+    {% if text %}
+        <h2>Input Text:</h2>
+        <p>{{ text }}</p>
+    {% endif %}
+
+    {% if summary %}
+        <h2>Summary:</h2>
+        <p>{{ summary }}</p>
+    {% endif %}
+</body>
+</html>
